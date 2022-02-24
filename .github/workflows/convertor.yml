@@ -60,15 +60,12 @@ jobs:
           repository: PaddlePaddle/PaddleOCR
           path: PaddleOCR
           ref: release/2.4
-
-      # 生成多国语言配置
-      - name: generate multi language configs
-        run: |
-          cd PaddleOCR/configs/rec/multi_language
-          python generate_multi_language_configs.py -l ch 
-          python generate_multi_language_configs.py -l chinese_cht 
-          python generate_multi_language_configs.py -l en 
-
+#
+#      # 生成多国语言配置
+#      - name: generate multi language configs
+#        run: |
+#          cd PaddleOCR/configs/rec/multi_language
+#          python generate_multi_language_configs.py -l en
 
       # 下载 paddle models
       - name: download paddle models
