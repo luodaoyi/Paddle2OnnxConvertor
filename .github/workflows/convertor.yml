@@ -65,26 +65,10 @@ jobs:
       - name: generate multi language configs
         run: |
           cd PaddleOCR/configs/rec/multi_language
-          python generate_multi_language_configs.py -l it
-          python generate_multi_language_configs.py -l es
-          python generate_multi_language_configs.py -l pt
-          python generate_multi_language_configs.py -l ru
-          python generate_multi_language_configs.py -l ar
-          python generate_multi_language_configs.py -l ta
-          python generate_multi_language_configs.py -l ug
-          python generate_multi_language_configs.py -l fa
-          python generate_multi_language_configs.py -l ur
-          python generate_multi_language_configs.py -l rs_latin
-          python generate_multi_language_configs.py -l oc
-          python generate_multi_language_configs.py -l rs_cyrillic
-          python generate_multi_language_configs.py -l bg
-          python generate_multi_language_configs.py -l uk
-          python generate_multi_language_configs.py -l be
-          python generate_multi_language_configs.py -l te 
-          python generate_multi_language_configs.py -l ch_tra
-          python generate_multi_language_configs.py -l hi
-          python generate_multi_language_configs.py -l mr
-          python generate_multi_language_configs.py -l ne
+          python generate_multi_language_configs.py -l ch 
+          python generate_multi_language_configs.py -l chinese_cht 
+          python generate_multi_language_configs.py -l en 
+
 
       # 下载 paddle models
       - name: download paddle models
