@@ -80,8 +80,7 @@ jobs:
           python generate_multi_language_configs.py -l bg
           python generate_multi_language_configs.py -l uk
           python generate_multi_language_configs.py -l be
-          python generate_multi_language_configs.py -l te
-          python generate_multi_language_configs.py -l kn
+          python generate_multi_language_configs.py -l te 
           python generate_multi_language_configs.py -l ch_tra
           python generate_multi_language_configs.py -l hi
           python generate_multi_language_configs.py -l mr
