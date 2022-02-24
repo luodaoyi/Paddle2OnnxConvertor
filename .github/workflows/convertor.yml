@@ -46,6 +46,7 @@ jobs:
         with:
           repository: PaddlePaddle/paddle2onnx
           path: Paddle2ONNX
+          ref: release/0.9
 
       # 安装Paddle2ONNX
       - name: install Paddle2ONNX
