@@ -1,4 +1,4 @@
-paddlepaddle==2.0.1
+paddlepaddle==2.4
 tqdm
 opencv-python
 imgaug

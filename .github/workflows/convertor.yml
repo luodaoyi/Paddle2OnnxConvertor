@@ -59,7 +59,7 @@ jobs:
         with:
           repository: PaddlePaddle/PaddleOCR
           path: PaddleOCR
-          ref: release/v2.1.1
+          ref: release/2.4
 
       # 生成多国语言配置
       - name: generate multi language configs
