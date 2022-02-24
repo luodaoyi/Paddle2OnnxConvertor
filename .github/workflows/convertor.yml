@@ -44,7 +44,7 @@ jobs:
       - name: checkout Paddle2ONNX
         uses: actions/checkout@v2
         with:
-          repository: luodaoyi/paddle2onnx-wild
+          repository: PaddlePaddle/paddle2onnx
           path: Paddle2ONNX
 
       # 安装Paddle2ONNX
@@ -60,12 +60,13 @@ jobs:
           repository: PaddlePaddle/PaddleOCR
           path: PaddleOCR
           ref: release/2.4
-#
-#      # 生成多国语言配置
+
+      # 生成多国语言配置
+      # https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_ch/multi_languages.md
 #      - name: generate multi language configs
 #        run: |
 #          cd PaddleOCR/configs/rec/multi_language
-#          python generate_multi_language_configs.py -l en
+#          python generate_multi_language_configs.py -l chinese_cht
 
       # 下载 paddle models
       - name: download paddle models
