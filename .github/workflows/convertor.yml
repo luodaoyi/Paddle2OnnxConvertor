@@ -3,8 +3,6 @@ name: Models Convertor
 on:
   workflow_dispatch:
   push:
-    tags:
-      - '*'
 
 jobs:
   build-and-release:
