@@ -19,11 +19,20 @@ function trainToOnnx() {
 # ch_ppocr_mobile_v2.0_cls
 trainToOnnx 48 192 configs/cls/cls_mv3.yml ch_ppocr_mobile_v2.0_cls
 
+# ch_PP-OCRv2_det_distill
+trainToOnnx -1 -1 configs/det/ch_PP-OCRv2/ch_PP-OCRv2_det_cml.yml ch_PP-OCRv2_det_distill
+
 # ch_ppocr_mobile_v2.0_det
 trainToOnnx -1 -1 configs/det/ch_ppocr_v2.0/ch_det_mv3_db_v2.0.yml ch_ppocr_mobile_v2.0_det
 
 # ch_ppocr_server_v2.0_det
 trainToOnnx -1 -1 configs/det/ch_ppocr_v2.0/ch_det_res18_db_v2.0.yml ch_ppocr_server_v2.0_det
+
+# ch_PP-OCRv2_rec
+trainToOnnx 32 -1 configs/rec/ch_PP-OCRv2/ch_PP-OCRv2_rec_distillation.yml ch_PP-OCRv2_rec
+
+# ch_PP-OCRv2_rec_slim_quant
+trainToOnnx 32 -1 configs/rec/ch_PP-OCRv2/ch_PP-OCRv2_rec.yml ch_PP-OCRv2_rec_slim_quant
 
 # ch_ppocr_mobile_v2.0_rec
 trainToOnnx 32 -1 configs/rec/ch_ppocr_v2.0/rec_chinese_lite_train_v2.0.yml ch_ppocr_mobile_v2.0_rec

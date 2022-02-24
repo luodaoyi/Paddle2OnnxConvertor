@@ -46,9 +46,8 @@ jobs:
       - name: checkout Paddle2ONNX
         uses: actions/checkout@v2
         with:
-          repository: RapidOCR/paddle2onnx-wild
+          repository: luodaoyi/paddle2onnx-wild
           path: Paddle2ONNX
-          ref: 1268f098e5d77d89e8227dc431cb72435fb4d0a9
 
       # 安装Paddle2ONNX
       - name: install Paddle2ONNX
@@ -62,7 +61,7 @@ jobs:
         with:
           repository: PaddlePaddle/PaddleOCR
           path: PaddleOCR
-          ref: release/2.0
+          ref: release/v2.1.1
 
       # 生成多国语言配置
       - name: generate multi language configs
@@ -149,16 +148,6 @@ jobs:
         if: always()
         run: |
           echo '${{ steps.git-log.outputs.log }}'
-
-      # 向钉钉发送消息
-      # https://github.com/marketplace/actions/web-request-action
-      - name: dingtalk
-        uses: satak/webrequest-action@master
-        with:
-          url: ${{ secrets.DINGTALK_WEBHOOK }}
-          method: POST
-          payload: '{"msgtype": "text", "text": {"content": "版本更新: ${{ github.repository }}-版本号: ${{ github.ref }} \n 编译时间： ${{ steps.time.outputs.time }} \n 距上个正式版的更新记录: \n${{ steps.git-log.outputs.log }}"}}'
-          headers: '{"Content-Type": "application/json"}'
 
       # 创建Changelog文件 triggered by git tag push
       - name: Generate Changelog
